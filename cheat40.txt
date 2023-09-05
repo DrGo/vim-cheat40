@@ -1,69 +1,11 @@
-Press q to dismiss, <Tab> to lose focus
-About {{{2
-  Abbreviations used in descriptions:
-
-  »      Forwards/rightwards
-  «      Backwards/leftwards
-  WORD   Space-delimited word
-
-  Notation for key sequences:
-
-  \      Leader (see `<leader>`)
-  ‹r›    A register (", *, 0, 1, …)
-         See `registers`
-  ‹Move› A motion or a text object
-         See `$VIMRUNTIME/doc/motion.txt`
-         See `text-objects`
-  ‹P›    A regular expression (pattern)
-         See `$VIMRUNTIME/doc/pattern.txt`
-  ‹Cmd›  An Ex command
-         See `$VIMRUNTIME/doc/cmdline.txt`
-  ‹Var›  A variable or option name
-         See `variables`
-         See `$VIMRUNTIME/doc/options.txt`
-  ‹n›    A (possibly optional) number
-  ‹c›    A single character
-  …      Any text
-  «C-…»  Press ctrl and … together
-  «Spc»  Press space bar
-  «CR»   Press Enter
-
-  Similarly, other special keys are
-  written between « and ». All other
-  characters are meant to be typed
-  literally.
-
-  Note that spaces are made explicit
-  only when it is not obvious that a
-  space must be used (e.g., \«Spc», that
-  is, leader followed by space). Ditto
-  for «CR».
-
-  Labels:
-
-  N    Type in Normal mode
-  C    Type in Command mode
-  I    Type in Insert mode
-  V    Type in Visual mode
-  M    Motion (may be used by itself or
-       after an operator)
-  T    Text object (use in Visual mode
-       or after an operator)
-  O    Operator (use in Visual mode, or
-       before a motion or a text object)
-  *    Acts on text under/after cursor
-}}}
+Max window               :<c-w>o
+Multiple cursors: /needle; cgn;. orn
 File {{{1
 New untitled document    :enew         N
-New/open file or dir     :e …          N
 Split open (horizontal)  :sp …         N
 Split open (vertical)    :vs …         N
 Reopen last opened file  «C-o»«C-o»    N
 Open with external app   gx           *N
-File explorer (Netrw)    :Ex           N
-Close file               :bd           N
-Close all                :%bd          N
-Save                     :w            N
 Save (only if modified)  :up           N
 Save as…                 :sav …        N
 Save all                 :wa           N
@@ -74,37 +16,10 @@ Reload file from disk    :e            N
 Revert to last saved     :e!           N
 # Unsaved changes are lost!
 Convert buffer to HTML   :TOhtml       N
-Print document           :hardcopy     N
-Quit (window)            :q            N
-Save and quit (window)   :x            N
-Ditto                    ZZ            N
-Quit without saving      :q!           N
-Ditto                    ZQ            N
 Save all and exit Vim    :xa           N
 Exit Vim without saving  :qa!          N
-File Explorer (Netrw) {{{2
-Open file/directory      «CR»         *N
-Open in horizontal split o            *N
-Open in vertical split   v            *N
-Open in a new tab        t            *N
-Open with external app   x            *N
-New file here            %             N
-New directory here       d             N
-Mark file                mf           *N
-Mark using shell glob    mr            N
-Unmark all               mu            N
-Edit marked files        me            N
-Rename file(s)           R            *N
-Delete file(s)           D            *N
-Refresh file list        «C-l»         N
-File info                qf           *N
-Toggle hidden files      a             N
-Switch file list format  i             N
-Exit file explorer       :Rex          N
-}}}
 Edit {{{1
 Basics {{{2
-Back to normal mode      «Esc»      NIVC
 Ditto                    «C-[»      NIVC
 Cancel command/operation «C-c»      NIVC
 Insert at cursor pos.    i             N
@@ -416,13 +331,6 @@ List tabs                :tabs         N
 Move window to new tab   «C-w»T        N
 Open one tab per buffer  :tab ball     N
 Execute Cmd in all tabs  :tabdo ‹Cmd›  N
-Help {{{1
-Help about …             :h …          N
-Help search              :helpgrep …   N
-# Use quickfix commands
-# to move between results
-Help on highlight test   :h hitest.vim N
-View mappings            :map …        N
 View Insert mode mappings:imap …       N
 View registers           :di           N
 List of sourced files    :scr          N
