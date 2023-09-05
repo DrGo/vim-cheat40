@@ -1,5 +1,6 @@
 Max window               :<c-w>o
 Multiple cursors: /needle; cgn;. orn
+Dup line no yanking      du            N 
 File {{{1
 New untitled document    :enew         N
 Split open (horizontal)  :sp …         N
